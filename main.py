@@ -17,7 +17,12 @@ time.sleep(3)
 print("So",name, "..... Hmm, What a Great Name, It's a nice family name" )
 print("Sorry to ask you this but....")
 time.sleep(8)
-age = input("How old are you? ")
+while True:
+    try:
+        age = int(input("How old are you? "))
+        break  # Exit the loop if input is valid
+    except ValueError:
+        print("Please enter a valid number for your age.")
 
 # Calculation of how old you are in days
 days = int(age) * 365.25
